@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "131171344991",
+    "project_id": "issue-tracker-5f264",
+    "storage_bucket": "issue-tracker-5f264.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131171344991:android:abd697674dc3ae5ad431ea",
+        "android_client_info": {
+          "package_name": "com.moringaschool.issuetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131171344991-pfumn06jps10r663re78tqs1ebb1tq63.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringaschool.issuetracker",
+            "certificate_hash": "abc871d2042b123353ee0496112d34a880c0ca0e"
+          }
+        },
+        {
+          "client_id": "131171344991-fjpe3p7f4sm093m5pi7d9r5tk37kkglp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKdpLOG7GOhpEN1gLqwdtX1TmBhh1LGrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131171344991-fjpe3p7f4sm093m5pi7d9r5tk37kkglp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
