@@ -13,6 +13,8 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         app:cardBackgroundColor="@color/card"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +23,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -28,53 +31,90 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:fontFamily="@font/roboto"
                 android:gravity="center"
                 android:text="Create Account"
-                android:textColor="@color/black" />
+                android:textColor="@color/icons"
+                android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/textUserName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_rounded"
                 android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
                 android:hint="UserName"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColorHint="@color/icons"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/textUserEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_rounded"
                 android:ems="10"
-                android:hint="UserName"
-                android:inputType="textPersonName" />
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:hint="User Email"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColorHint="@color/icons"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/textUserPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_rounded"
                 android:ems="10"
-                android:hint="UserName"
-                android:inputType="textPersonName" />
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:hint="Password"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColorHint="@color/icons"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/textUserConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_rounded"
                 android:ems="10"
-                android:hint="UserName"
-                android:inputType="textPersonName" />
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:hint="Confirm Password"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColorHint="@color/icons"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/buttonCreateAccount"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:paddingRight="10dp"
                 android:text="Create Account" />
 
             <TextView
                 android:id="@+id/logInText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Already have an account?" />
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="Already have an account? LogIn here!"
+                android:textColor="@color/secondary_text"
+                android:textSize="14sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
