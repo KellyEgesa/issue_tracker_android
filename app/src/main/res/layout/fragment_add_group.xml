@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    android:padding="10dp"
-    tools:context=".ui.LogIn">
+    android:layout_height="wrap_content"
+    tools:context=".ui.AddGroupFragment">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardCreateGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -20,41 +19,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ProgressBar
+            android:id="@+id/progressBarCreateGroup"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="182dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="182dp"
+            android:layout_marginBottom="60dp"
+            android:progressBackgroundTint="@color/red"
+            android:visibility="gone" />
+
         <LinearLayout
+            android:id="@+id/layoutCreateGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textLogin"
+                android:id="@+id/textAddGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="Login"
+                android:text="Create Account"
                 android:textColor="@color/icons"
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/textLoginEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/bg_rounded"
-                android:ems="10"
-                android:textColor="@color/icons"
-                android:fontFamily="@font/roboto"
-                android:gravity="center"
-                android:hint="User Email"
-                android:inputType="textPersonName"
-                android:padding="10dp"
-                android:textColorHint="@color/icons"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/textLoginPassword"
+                android:id="@+id/textAddGroupName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -62,31 +58,37 @@
                 android:ems="10"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:textColor="@color/icons"
-                android:hint="Password"
+                android:hint="Group Name"
                 android:inputType="textPersonName"
                 android:padding="10dp"
+                android:textColor="@color/icons"
                 android:textColorHint="@color/icons"
                 android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/buttonCreateAccount"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:paddingRight="10dp"
-                android:text="Login" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/logInText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:gravity="center"
-                android:text="Don't have an account? Sign up here!"
-                android:textColor="@color/secondary_text"
-                android:textSize="14sp" />
+                <Button
+                    android:id="@+id/buttonCreateGroup"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:text="Create Group" />
+
+                <Button
+                    android:id="@+id/buttonCancelCreateGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#B00020"
+                    android:text="Cancel" />
+            </LinearLayout>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

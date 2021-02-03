@@ -3,7 +3,9 @@
     <color name="primary">#03A9F4</color>
     <color name="background">#07070A</color>
     <color name="card">#202020</color>
+    <color name="secondary_card">#575757</color>
     <color name="button">#2350B2</color>
+    <color name="red">#B00020</color>
     <color name="textSecondary">#979696</color>
     <color name="primary_dark">#0288D1</color>
     <color name="primary_light">#B3E5FC</color>

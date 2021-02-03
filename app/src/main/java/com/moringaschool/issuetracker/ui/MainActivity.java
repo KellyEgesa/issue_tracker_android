@@ -1,27 +1,33 @@
 package com.moringaschool.issuetracker.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.moringaschool.issuetracker.R;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
     @BindView(R.id.textDateView)
     TextView mDate;
+    @BindView(R.id.addGroupCard)
+    CardView mCreateGroup;
+    @BindView(R.id.addNewProject)
+    ImageView mAddNewProject;
 
     Date currentDate = new Date();
 
@@ -45,9 +51,26 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
         String strDate = formatter.format(currentDate);
         mDate.setText(strDate);
+
+        mCreateGroup.setOnClickListener(this);
+        mAddNewProject.setOnClickListener(this);
     }
 
     public void ClickMenu(View view) {
         openDrawer(drawer);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mCreateGroup) {
+            FragmentManager fm = getSupportFragmentManager();
+            AddGroupFragment addGroupFragment = new AddGroupFragment();
+            addGroupFragment.show(fm, "Group Fragment");
+        }
+        if (v == mAddNewProject) {
+            FragmentManager fm = getSupportFragmentManager();
+            AddProjectFragment addProjectFragment = new AddProjectFragment();
+            addProjectFragment.show(fm, "Project Fragment");
+        }
     }
 }
