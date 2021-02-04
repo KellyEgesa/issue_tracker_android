@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CardView mCreateGroup;
     @BindView(R.id.addNewProject)
     ImageView mAddNewProject;
+    @BindView(R.id.addNewGroupMember)
+    ImageView mAddNewGroupMember;
 
     Date currentDate = new Date();
 
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mCreateGroup.setOnClickListener(this);
         mAddNewProject.setOnClickListener(this);
+        mAddNewGroupMember.setOnClickListener(this);
     }
 
     public void ClickMenu(View view) {

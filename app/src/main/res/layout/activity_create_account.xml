@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/background"
     android:padding="10dp"
     tools:context=".ui.CreateAccount">
 
@@ -117,7 +117,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
                 android:text="Already have an account? LogIn here!"
-                android:textColor="@color/secondary_text"
+                android:textColor="@color/divider"
                 android:textSize="14sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

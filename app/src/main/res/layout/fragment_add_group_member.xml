@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ProgressBar
-            android:id="@+id/progressBarCreateProject"
+            android:id="@+id/progressBarAddGroupMember"
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,25 +32,25 @@
             android:visibility="gone" />
 
         <LinearLayout
-            android:id="@+id/layoutCreateProject"
+            android:id="@+id/layoutCreateGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textAddProject"
+                android:id="@+id/textAddGroupMember"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="Create a new Project"
+                android:text="Add Group Member"
                 android:textColor="@color/icons"
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/textAddProjectName"
+                android:id="@+id/textAddGroupMemberEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -58,61 +58,32 @@
                 android:ems="10"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:hint="Project Name"
+                android:hint="User Email"
                 android:inputType="textPersonName"
                 android:padding="10dp"
                 android:textColor="@color/icons"
                 android:textColorHint="@color/icons"
                 android:textSize="18sp" />
 
-            <EditText
-                android:id="@+id/textAddProjectDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/bg_rounded"
-                android:ems="10"
-                android:fontFamily="@font/roboto"
-                android:gravity="center"
-                android:hint="Project Description"
-                android:inputType="textCapSentences|textMultiLine"
-                android:lines="3"
-                android:maxLength="90"
-                android:maxLines="4"
-                android:padding="10dp"
-                android:textColor="@color/icons"
-                android:textColorHint="@color/icons"
-                android:textSize="18sp" />
-
-
-            <CalendarView
-                android:id="@+id/addProjectCalendarView"
-                android:layout_width="match_parent"
-                android:layout_height="307dp"
-                android:background="@drawable/bg_rounded"
-                android:dateTextAppearance="@style/CalenderViewDateCustomText"
-                android:theme="@style/CalenderViewCustom"
-                android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/buttonCreateProject"
+                    android:id="@+id/buttonAddGroupMember"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
                     android:paddingRight="10dp"
-                    android:text="Create Project" />
+                    android:text="Add " />
 
                 <Button
-                    android:id="@+id/buttonCancelCreateProject"
+                    android:id="@+id/buttonCancelCreateGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_weight="1"
                     android:backgroundTint="#B00020"
                     android:text="Cancel" />
