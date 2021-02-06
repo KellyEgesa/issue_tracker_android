@@ -63,23 +63,22 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
                 android:hint="Password"
-                android:inputType="textPersonName"
+                android:inputType="textPersonName|textPassword"
                 android:padding="10dp"
                 android:textColor="@color/icons"
                 android:textColorHint="@color/icons"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/buttonCreateAccount"
+                android:id="@+id/buttonLogInAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:paddingRight="10dp"
                 android:text="Login" />
 
             <TextView
-                android:id="@+id/logInText"
+                android:id="@+id/createAccountText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"

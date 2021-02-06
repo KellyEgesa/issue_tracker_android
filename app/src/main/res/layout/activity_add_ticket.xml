@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:gravity="center"
     android:padding="10dp"
-    tools:context=".ui.CreateAccount">
+    tools:context=".ui.AddTicket">
+
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardCreateTicket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -20,25 +22,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ProgressBar
+            android:id="@+id/progressBarCreateTicket"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="182dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="182dp"
+            android:layout_marginBottom="60dp"
+            android:progressBackgroundTint="@color/red"
+            android:visibility="gone" />
+
         <LinearLayout
+            android:id="@+id/layoutCreateTicket"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textCreateAccount"
+                android:id="@+id/textAddTicket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="Create Account"
+                android:text="Create a ticket"
                 android:textColor="@color/icons"
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/textUserName"
+                android:id="@+id/textAddTicketName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -46,7 +61,7 @@
                 android:ems="10"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:hint="UserName"
+                android:hint="Ticket Name"
                 android:inputType="textPersonName"
                 android:padding="10dp"
                 android:textColor="@color/icons"
@@ -54,7 +69,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/textUserEmail"
+                android:id="@+id/textAddTicketDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -62,63 +77,52 @@
                 android:ems="10"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:hint="User Email"
-                android:inputType="textPersonName"
+                android:hint="Ticket Description"
+                android:inputType="textCapSentences|textMultiLine"
+                android:lines="3"
+                android:maxLength="90"
+                android:maxLines="4"
                 android:padding="10dp"
                 android:textColor="@color/icons"
                 android:textColorHint="@color/icons"
                 android:textSize="18sp" />
 
-            <EditText
-                android:id="@+id/textUserPassword"
+            <CalendarView
+                android:id="@+id/addTicketCalendarView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="302dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/bg_rounded"
-                android:ems="10"
-                android:fontFamily="@font/roboto"
-                android:gravity="center"
-                android:hint="Password"
-                android:inputType="textPersonName|textPassword"
-                android:padding="10dp"
-                android:textColor="@color/icons"
-                android:textColorHint="@color/icons"
-                android:textSize="18sp" />
+                android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                android:theme="@style/CalenderViewCustom"
+                android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
 
-            <EditText
-                android:id="@+id/textUserConfirmPassword"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/bg_rounded"
-                android:ems="10"
-                android:fontFamily="@font/roboto"
-                android:gravity="center"
-                android:hint="Confirm Password"
-                android:inputType="textPersonName|textPassword"
-                android:padding="10dp"
-                android:textColor="@color/icons"
-                android:textColorHint="@color/icons"
-                android:textSize="18sp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/buttonCreateAccount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:paddingRight="10dp"
-                android:text="Create Account" />
+                <Button
+                    android:id="@+id/buttonCreateTicket"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:paddingRight="10dp"
+                    android:text="Create Group" />
 
-            <TextView
-                android:id="@+id/logInText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:gravity="center"
-                android:text="Already have an account? LogIn here!"
-                android:textColor="@color/divider"
-                android:textSize="14sp" />
+                <Button
+                    android:id="@+id/buttonCancelCreateTicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:backgroundTint="#B00020"
+                    android:text="Cancel" />
+            </LinearLayout>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

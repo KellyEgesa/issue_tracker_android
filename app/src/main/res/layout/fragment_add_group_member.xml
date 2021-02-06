@@ -32,7 +32,7 @@
             android:visibility="gone" />
 
         <LinearLayout
-            android:id="@+id/layoutCreateGroup"
+            android:id="@+id/layoutAddGroupMember"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -81,7 +81,7 @@
                     android:text="Add " />
 
                 <Button
-                    android:id="@+id/buttonCancelCreateGroup"
+                    android:id="@+id/buttonCancelAddGroupMember"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
